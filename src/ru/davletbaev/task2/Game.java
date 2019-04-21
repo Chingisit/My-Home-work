@@ -47,7 +47,8 @@ public class Game {
     }
 }
 
-/*public class Game {
+/*
+public class Game {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.print("И Г Р А  *У Г А Д А Й  Ч И С Л О!!!*\n");
@@ -76,4 +77,5 @@ public class Game {
         }
             scanner.close();
         }
-  }/*
+  }
+*/
