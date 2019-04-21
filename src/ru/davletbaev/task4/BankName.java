@@ -25,10 +25,9 @@ public class BankName {
 
     @Override
     public String toString() {
-        return "BankName{" +
-                "title='" + title + '\'' +
-                ",\n bankBranches=" + Arrays.toString(bankBranches) +
-                '}';
+        return " Обслуживающий Банк - " +
+                "ОАО Сбербанк" +
+                "\n Республика Татарстан" + Arrays.toString(bankBranches);
     }
 }
 

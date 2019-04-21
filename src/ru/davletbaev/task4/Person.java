@@ -49,11 +49,10 @@ public class Person {
 
     @Override
     public String toString() {
-        return "Person{" +
-                "firstName='" + firstName + '\'' +
-                ", lastName='" + lastName + '\'' +
-                ", birthday=" + birthday +
-                ", passportNumber=" + passportNumber +
-                '}';
+        return " Данные клиента: \n" +
+                " Имя - " + firstName + "\n" +
+                " Фамилия - " + lastName + "\n" +
+                " Дата рождения - " + birthday +
+                "\n Паспорт - " + passportNumber;
     }
 }

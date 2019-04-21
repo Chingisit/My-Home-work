@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class BankBranch {
     private String title;
-    private Client[] clients = new Client[10];
+    private PaymentWindow[] paymentWindows = new PaymentWindow[5];
 
     public String getTitle() {
         return title;
@@ -14,19 +14,18 @@ public class BankBranch {
         this.title = title;
     }
 
-    public Client[] getClients() {
-        return clients;
+    public PaymentWindow[] getPaymentWindows() {
+        return paymentWindows;
     }
 
-    public void setClients(Client[] clients) {
-        this.clients = clients;
+    public void setPaymentWindows(PaymentWindow[] paymentWindows) {
+        this.paymentWindows = paymentWindows;
     }
 
     @Override
     public String toString() {
-        return "BankBranch{" +
-                "title='" + title + '\'' +
-                "\n clients=" + Arrays.toString(clients) +
-                '}';
+        return " подразделение в г.Иннополис" +
+                " № 777" +
+                "\n Окно оплаты - " + Arrays.toString(paymentWindows);
     }
 }

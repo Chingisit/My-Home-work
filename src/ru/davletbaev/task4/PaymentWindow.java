@@ -3,15 +3,15 @@ package ru.davletbaev.task4;
 import java.util.Arrays;
 
 public class PaymentWindow {
-    private String title;
-    private Client [] clients = new Client[10];
+    private Number [] numbers = new Number[5];
+    private Client [] clients = new Client[5];
 
-    public String getTitle() {
-        return title;
+    public Number[] getNumbers() {
+        return numbers;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    public void setNumbers(Number[] numbers) {
+        this.numbers = numbers;
     }
 
     public Client[] getClients() {
@@ -24,9 +24,8 @@ public class PaymentWindow {
 
     @Override
     public String toString() {
-        return "PaymentWindow{" +
-                "title='" + title + '\'' +
-                ", clients=" + Arrays.toString(clients) +
+        return  " 5 " + "\n" + Arrays.toString(clients) +
                 '}';
     }
 }
+
