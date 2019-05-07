@@ -13,8 +13,9 @@ public class AritchProgression {
         System.out.print("Введите кол-во членов: ");
         int b = scanner.nextInt();
         for (int i = 0; i < b; i++) {
-        int AP  = (i * c)  + a;
-            System.out.print(AP + " ");
+        int ap  = (i * c)  + a;
+            System.out.print(ap + " ");
         }
+        scanner.close();
     }
 }
