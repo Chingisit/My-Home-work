@@ -1,17 +1,23 @@
 package ru.davletbaev.task6;
 
 public class Counter {
-    public static int counter = 0;
+    public static int counter;
+
+    Counter() {
+        count();
+    }
 
     public static void main(String[] args) {
-    Less less = new Less();
-    less.count();
-    less.count();
-    less.count();
+        Counter counter1 = new Counter();
+        Counter counter2 = new Counter();
+        Counter counter3 = new Counter();
+        Counter counter4 = new Counter();
 
-        System.out.println();
+        System.out.println(Counter.counter);
     }
-    public void count(){
+
+
+    public static void count() {
         counter++;
     }
-    }
+}
