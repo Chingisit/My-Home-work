@@ -1,4 +1,4 @@
-package ru.davletbaev.Task7.Interface;
+package ru.davletbaev.task7.Interface;
 
 public interface Fly {
     void flying();

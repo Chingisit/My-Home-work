@@ -1,4 +1,4 @@
-package ru.davletbaev.Task7.Human;
+package ru.davletbaev.task7.Human;
 
 public class main implements Runeble, Swimming {
         public static void main(String[] args) {

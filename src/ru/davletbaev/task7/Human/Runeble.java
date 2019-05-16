@@ -1,4 +1,4 @@
-package ru.davletbaev.Task7.Human;
+package ru.davletbaev.task7.Human;
 
 public interface Runeble {
     void run();

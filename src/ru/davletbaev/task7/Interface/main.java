@@ -1,4 +1,4 @@
-package ru.davletbaev.Task7.Interface;
+package ru.davletbaev.task7.Interface;
 
 public class main {
     public static void main(String[] args) {
