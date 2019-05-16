@@ -1,29 +1,11 @@
 package ru.davletbaev.task7.Human;
 
-public class main implements Runeble, Swimming {
+public class main  {
         public static void main(String[] args) {
-        Human human = new Human() {
-            @Override
-            public void Swim() {
+        Human human = new Sport();
+        human.run();
+        human.swim();
 
-            }
-
-            @Override
-            public void run() {
-
-            }
-        };
-
-    }
-
-    @Override
-    public void run() { System.out.println("Бегаю");
-
-    }
-
-    @Override
-    public void swim() {   System.out.println("Плаваю");
-
-    }
+        }
 }
 
