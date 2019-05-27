@@ -6,7 +6,6 @@ public class Mama {
         System.out.println("Сынок что будешь кушатьт?");
         for (Food food : Food.values())
         System.out.println(food.getName() + " - " + food.getCode());
-        Child child = new Child();
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
         if (num == 1)
