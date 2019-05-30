@@ -1,43 +1,45 @@
 package ru.davletbaev.task10;
 
+import java.util.Scanner;
+
 public class VendingMachine {
-    private double money = 0;
     private DrinkList[] drinks;
+    private Scanner scanner;
 
-    public VendingMachine(DrinkList[] drinks) {
+    public VendingMachine(DrinkList[] drinks, Scanner scanner) {
         this.drinks = drinks;
+        this.scanner = scanner;
     }
 
-    public void addMoney(double money) {
-        this.money = money;
-    }
-
-    private DrinkList getDrink(int key) {
-        if (key < drinks.length){
-            return drinks[key];
-        } else {
-            return null;
-        }
-    }
-
-    public void giveMeADrink(int key){
-        if (this.money > 0) {
-            DrinkList drink = getDrink(key);
-
-            if (drink != null) {
-                if (drink.getPrice() <= money) {
-                    System.out.println("Возьмите ваш напиток: " + drink.getDesc());
-                    money -= drink.getPrice();
-                } else {
-                    System.out.println("Недостаточно средств!");
+    private DrinkList getDrink(int code) {
+        while(true) {
+            for (DrinkList drinkList : drinks) {
+                if (code == drinkList.getCode()) {
+                    System.out.println("Вы выбрали - " + drinkList.getDesc());
+                    return drinkList;
                 }
             }
-        } else {
-            System.out.println("Халявы тут нет!");
+            System.out.println("УПС - Товар не найден");
         }
     }
 
-    public void setDrinks(DrinkList[] drinks) {
-        this.drinks = drinks;
+    public void giveMeADrink(){
+        System.out.print("Выберите напиток: ");
+        int code = scanner.nextInt();
+
+        DrinkList drink = getDrink(code);
+        int money = 0;
+
+        do {
+            System.out.println("Внесите деньги: ");
+            money += scanner.nextInt();
+
+            if (drink.getPrice() <= money) {
+                System.out.println("Возьмите ваш напиток: " + drink.getDesc());
+            } else {
+                System.out.println("Недостаточно средств!");
+            }
+
+        } while (money < drink.getPrice());
     }
 }
