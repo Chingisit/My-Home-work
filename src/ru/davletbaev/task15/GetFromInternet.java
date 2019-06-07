@@ -12,6 +12,7 @@ public class GetFromInternet {
                  BufferedReader br = new BufferedReader(reader)
             ){
                 System.out.println(br.readLine());
+
             }
 
         } catch (IOException e) {
