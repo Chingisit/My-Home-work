@@ -13,12 +13,12 @@ public enum DrinkList {
     ERROR(0, "Товар не найден!", 0);
 
     private int code;
-   // private String desc;
+    private String desc;
     private int price;
 
     DrinkList(int code, String desc, int price) {
         this.code = code;
-       // this.desc = desc;
+        this.desc = desc;
         this.price = price;
     }
 
@@ -26,21 +26,28 @@ public enum DrinkList {
         return code;
     }
 
-    //public static String getDesc() {
-      //  return desc;
-    //}
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public String getDesc() {
+        return desc;
+    }
+
+    public void setDesc(String desc) {
+        this.desc = desc;
+    }
 
     public int getPrice() {
         return price;
     }
 
-    public DrinkList of(int code) {
-        for (DrinkList list : values()) {
-            if (list.code == code) {
-                return list;
-            }
+    public void setPrice(int price) {
+        this.price = price;
+    }
 
-        }
-        return null;
+    @Override
+    public String toString() {
+        return String.format(" %s за %d руб. ", desc, price, code );
     }
 }
