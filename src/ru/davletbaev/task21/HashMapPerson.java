@@ -35,33 +35,8 @@ public class HashMapPerson {
                 removeItemFromMapByValue(map, person);
             }
         }
-
-////        2� ������� � �������������� stream
-//        map.values()
-//                .stream()
-//                .filter(person -> Collections.frequency(map.values(), person) > 1)
-//                .collect(Collectors.toList())
-//                .forEach(person -> removeItemFromMapByValue(map, person));
-
     }
 
-    /*
-    --map, copy--
-    person1:
-    Key2, person1 =  Person{age=29, secondName='�������', gender='���'}
-    Key1, person1 = Person{age=29, secondName='�������', gender='���'}
-
-
-    Key6, person2 = Person{age=35, secondName='������', gender='���'}
-    mKey5, person2 = Person{age=35, secondName='������', gender='���'}
-
-    ----
-    Key4, person3 =  Person{age=34, secondName='��������', gender='���'}
-    person4:
-    Key3, person4 =  Person{age=34, secondName='��������', gender='���'}
-     */
-
-    //value = person1 and value = person2;
     public static void removeItemFromMapByValue(Map<String, Person> map, Person value)
     {
         Map<String, Person> copy = new HashMap<>(map);
